@@ -1,0 +1,171 @@
+.avatar {
+	border-radius: 50%;
+	overflow: hidden;
+	width: 60px;
+	height: 60px;
+	margin: -50px auto 0 auto;
+
+	img {
+		width: 60px;
+		height: 60px;
+	}
+}
+
+// Langues
+$check: 22px;
+.languages {
+	font-size: 1.6rem;
+	margin-top: 0;
+	.name {
+		small {
+			color: color('grey', 'darken-1');
+		}
+	}
+	// surcharge du framework
+	.progress {
+		position: relative;
+		height: 8px;
+		background: rgba(0, 0, 0, 0.1);
+		border-radius: 2px;
+		.percentage {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 0%;
+			height: 8px;
+			background: $primary-color;
+			border-radius: 2px;
+			.percent {
+				position: absolute;
+				top: -7px;
+				right: -1px;
+				height: $check;
+				width: $check;
+				line-height: $check;
+				text-align: center;
+				background: $primary-color;
+				border-radius: $check;
+				box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2);
+				.material-icons {
+					font-size: 1.4rem;
+					color: color('shades', 'white');
+					line-height: $check;
+				}
+			}
+		}
+	}
+}
+
+
+// Expériences
+.timeline {
+	position: relative;
+
+	&::before {
+		content: '';
+		margin: 0 0 0 -2px;
+		position: absolute;
+		top: 0;
+		left: 31px;
+		width: 3px;
+		height: 100%;
+		background: $primary-color;
+	}
+	.date,
+	.job {
+		padding: 2px 10px;
+		font-size: 1.2rem;
+		display: inline-block;
+	}
+	.date {
+		background: $primary-color;
+		color: color('shades', 'white');
+		left: 0;
+		top: -53px;
+		position: absolute;
+		height: 28px;
+		font-size: 13px;
+		font-weight: 500;
+		line-height: 28px;
+		padding: 0 12px;
+		border-radius: 16px;
+	}
+	.job {
+		background: color('grey', 'lighten-2');
+	}
+	.name {
+		font-size: 1.8rem;
+		display: block;
+		margin-bottom: 1rem;
+		font-weight: 500;
+	}
+	.timeline-block {
+		margin: 30px 0;
+		position: relative;
+
+		&:first-child {
+			margin-top: 0;
+		}
+		&:last-child {
+			margin-bottom: 0;
+		}
+		&:nth-child(even) {
+			.timeline-content {
+				&::before {
+					top: 19px;
+					left: auto;
+					right: 100%;
+					border-left: none;
+					border-right: 7px solid #fefefe;
+				}
+			}
+		}
+		.timeline-point {
+			position: absolute;
+			top: 12px;
+			left: 19px;
+			width: $check;
+			height: $check;
+			line-height: $check;
+			text-align: center;
+			background: $primary-color;
+			border-radius: $check;
+			box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2);
+			.material-icons {
+				font-size: 1.4rem;
+				color: color('shades', 'white');
+				line-height: $check;
+			}
+		}
+		.timeline-content {
+			margin-left: 60px;
+			padding-top: 60px;
+			position: relative;
+			width: auto;
+		}
+	}
+}
+
+
+// Studies
+.studies {
+	li + li {
+		margin-top: 20px;
+	}
+
+	.date {
+		display: block;
+		margin: 4px 24px 0 14px;
+		font-size: 12px;
+		font-weight: bold;
+		text-transform: uppercase;
+	}
+}
+
+main {
+	> section {
+		+ section {
+			margin-top: 40px;
+		}
+	}
+}

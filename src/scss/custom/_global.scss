@@ -1,0 +1,41 @@
+body {
+	background-color: color('grey', 'lighten-5');
+	position: relative;
+	z-index: 2;
+}
+
+main {
+	.title-container {
+		span {
+			font-size: 2rem;
+			font-weight: 300;
+			display: block;
+			color: color('grey', 'darken-1');
+		}
+	}
+}
+
+.cv-container {
+	@extend .card;
+	display: flex;
+	flex-flow: column;
+	margin: -5vh auto 0 auto;
+	border-top: 5px solid $primary-color-light;
+	padding: 20px;
+}
+
+.section-title {
+	display: flex;
+	align-items: center;
+	.material-icons {
+		color: color('deep-purple', 'lighten-3');
+		margin-right: 5px;
+		font-size: 3rem;
+	}
+	span {
+		&:last-child {
+			height: 38px;
+			line-height: 1.35;
+		}
+	}
+}

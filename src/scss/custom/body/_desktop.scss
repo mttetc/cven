@@ -1,0 +1,71 @@
+
+.avatar {
+	width: 120px;
+	height: 120px;
+	margin-top: -80px;
+
+	img {
+		width: 120px;
+		height: 120px;
+	}
+}
+// Expériences
+.timeline {
+	margin: 30px 0;
+
+	&::before {
+		left: 50%;
+	}
+	.date {
+		margin: 0;
+		position: absolute;
+		top: 10px;
+		left: unset;
+        right: -227px;
+        width: 170px;
+        text-align: center;
+	}
+	.timeline-block {
+		margin: 30px 0;
+		position: relative;
+
+		&:first-child {
+			margin-top: 0;
+		}
+		&:last-child {
+			margin-bottom: 0;
+		}
+		&:nth-child(even) {
+            .timeline-content {
+                float: right;
+                .date {
+                    right: unset;
+                    left: -228px;
+                    top: 6px;
+                }
+            }
+            
+            &::after {
+                clear: both;
+                content: '';
+                display: table;
+            }
+		}
+		.timeline-point {
+			margin: 0 0 0 -12px;
+			left: 50%;
+		}
+		.timeline-content {
+			position: relative;
+			width: 46%;
+			margin: 0;
+			padding: 0;
+		}
+	}
+}
+
+.chips {
+	display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
